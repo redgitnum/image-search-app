@@ -1,3 +1,4 @@
+import * as keys from './keys.js'
 export const fetchData = (e, callback) => {
     let {
         searchQuery,
@@ -16,7 +17,7 @@ export const fetchData = (e, callback) => {
     safeSearch = safeSearch ? 'true': 'false';
     // console.log(editorChoice)
 
-    fetch(`https://pixabay.com/api/?key=14924987-f77db2d5a71fbf9dc6677348b&q=${parsedQuery}&image_type=photo&pretty=true&category=${category}&colors=${parsedColors}&language=${language}&orientation=${orientation}&editors_choice=${editorChoice}&safesearch=${safeSearch}&order=${order}&per_page=30&page=${page}`)
+    fetch(`https://pixabay.com/api/?key=${keys.pixakey}&q=${parsedQuery}&image_type=photo&pretty=true&category=${category}&colors=${parsedColors}&language=${language}&orientation=${orientation}&editors_choice=${editorChoice}&safesearch=${safeSearch}&order=${order}&per_page=30&page=${page}`)
     .then(res => res.json())
     .then(data => callback(data.hits))
 
