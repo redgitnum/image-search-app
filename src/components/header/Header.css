@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput {
+    border-radius: 5px;
+    border: none;
+    padding: 15px 25px 15px 10px;
+    font-size: 24px;
+    width: 80vw;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.powered {
+    margin: 0 0 5px 0;
+    padding: 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.powered img {
+    width: 80px;
+    vertical-align: text-bottom;
+    cursor: pointer;
+}
+.powered img:hover {
+    filter: brightness(50%) sepia(100) saturate(100) hue-rotate(195deg);
+}
+
+h1 {
+    margin: 0 0 5px;
+}
