@@ -16,6 +16,10 @@
     top: 0; 
 }
 
+.imageContainer:hover .pageLink{
+    animation-play-state: running;
+}
+
 .imageInfo {
     position: absolute;
     background: rgba(0,0,0,0.7);
@@ -80,11 +84,26 @@
 .pageLink {
     position: absolute;
     width: 100%;
+    left: -100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: slide-in 0.5s;
+    animation-delay: 0.5s;
+    animation-play-state: paused;
+    animation-fill-mode: forwards;
+    animation-iteration-count: initial;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -100%
+    }
+    100% {
+        left: 0%;
+    }
 }
 
 .stats {
