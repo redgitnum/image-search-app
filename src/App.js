@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './components/header/Header.component';
 import Content from './components/content/Content.component'
 import * as utils from './utils/'
+import './App.css'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -28,7 +30,10 @@ class App extends React.Component {
         utils.fetchData(this.state, callback => {
           this.setState({data: callback, page: 1})
         })
+        let scrollInfo = document.getElementById('photos')
+        window.scrollBy(0, scrollInfo.getBoundingClientRect().y)
       }
+      
   }
 
   inputChange = (e) => {
@@ -68,6 +73,8 @@ class App extends React.Component {
     utils.fetchData(this.state, callback => {
       this.setState({data: callback})
     })
+    let scrollInfo = document.getElementById('photos')
+      window.scrollBy(0, scrollInfo.getBoundingClientRect().y)
 
   }
 

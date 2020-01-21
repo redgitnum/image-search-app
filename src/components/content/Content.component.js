@@ -47,7 +47,7 @@ const Content = (props) => {
       >
         {
           props.images.map((image) => 
-              <div key={'index' + image.imageSize + 's' + image.downloads} className="imageContainer">
+              <div key={image.webformatURL.slice(23)} className="imageContainer">
                 <Img
                   src={image.webformatURL}
                   placeholderSrc={image.previewURL}
@@ -59,7 +59,7 @@ const Content = (props) => {
                 <div className="imageInfo">
                   <div className="pageLink"><a href={image.pageURL} target='_blank' rel="noopener noreferrer"><img alt='' className="bigIcon" src={asset.link} /></a></div>
                   <div className="author">author: {image.user}</div>
-            <div className="tags">{image.tags.split(', ').map((tag, i) => <p key={i}>{tag}</p>)}</div>
+                  <div className="tags">{image.tags.split(', ').map((tag, i) => <p key={i}>{tag}</p>)}</div>
                   <div className="stats">
                     <div className="likes">{image.likes}<img alt='' className="smallIcon" src={asset.like} /></div>
                     <div className="views">{image.views}<img alt='' className="smallIcon" src={asset.views} /></div>
