@@ -91,9 +91,8 @@ class App extends React.Component {
 
     window.onscroll = () => {
       let containerH = document.getElementById('photos');
-      
       if(!counter) {
-        if(containerH.scrollHeight - 5000 < window.scrollY) {
+        if(containerH.getBoundingClientRect().bottom < 2000) {
           counter=1
           setTimeout(() => {
             counter = 0

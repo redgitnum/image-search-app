@@ -9,7 +9,6 @@ body, html {
     width: 100%;
     background: rgb(243, 243, 243);
     font-family: 'Raleway', sans-serif;
-    scroll-behavior: smooth;
 }
 
 #root {
